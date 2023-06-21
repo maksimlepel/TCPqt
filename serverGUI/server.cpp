@@ -25,7 +25,7 @@ void Server::slotReadyRead()
 {
     socket->waitForReadyRead();
 _w->dataFromServer.clear();
- _w->dataFromServer=socket->readAll();;
+ _w->dataFromServer=socket->readAll();
 
 }
 void Server::SendToClient(QPixmap pm)

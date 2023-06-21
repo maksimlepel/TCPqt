@@ -30,7 +30,7 @@ private:
     Ui::MainWindow *ui;
     QTcpSocket* socket;
     QByteArray Data;
-    void SendToServer(QString str);
+    void SendString(QString str);
     void SendImage();
 public slots:
     void slotReadyRead();
