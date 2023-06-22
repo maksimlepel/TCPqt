@@ -24,18 +24,15 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::SendToServer()
 {
+    myPixmap.load(ui->lineEdit_2->text());
     int size = ui->spinBox->value();
     QString color=ui->comboBox->currentText();
     QString str=ui->lineEdit->text();
-
     Data.clear();
     QDataStream out(&Data,QIODevice::WriteOnly);
     //out.setVersion(QDataStream::Qt_5_6);
     out<<myPixmap<<str<<color<<size;
-
     socket->write(Data);
-
-    ui->lineEdit->clear();
 }
 
 
@@ -49,7 +46,7 @@ void MainWindow::slotReadyRead()
     ui->label_2->setPixmap( myPixmap );
 }
 
-void MainWindow::on_pushButton_3_clicked()//send picture
+void MainWindow::on_pushButton_3_clicked()
 {
 
 this->SendToServer();

@@ -11,13 +11,10 @@ class Server: public QTcpServer
 {
     Q_OBJECT
 public:
-    //QPixmap myPixmap;
     MainWindow* _w;
     explicit Server(MainWindow *w);
     QTcpSocket *socket;
 private:
-QPixmap myPixmap;
-QString myString;
 QVector <QTcpSocket*> Sockets;
 QByteArray Data;
 void SendToClient(QPixmap pm);

@@ -40,13 +40,13 @@ public:
     QPushButton *pushButton_2;
     QLineEdit *lineEdit_3;
     QLabel *label_8;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QFormLayout *formLayout;
     QLabel *label_5;
     QLineEdit *lineEdit;
     QLabel *label_6;
     QLineEdit *lineEdit_2;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QFormLayout *formLayout_2;
     QPushButton *pushButton_3;
     QComboBox *comboBox;
@@ -94,61 +94,61 @@ public:
         QFont font1;
         font1.setPointSize(12);
         label_8->setFont(font1);
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(20, 430, 141, 98));
-        formLayout = new QFormLayout(widget);
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(20, 430, 141, 102));
+        formLayout = new QFormLayout(layoutWidget);
         formLayout->setSpacing(6);
         formLayout->setContentsMargins(11, 11, 11, 11);
         formLayout->setObjectName(QStringLiteral("formLayout"));
         formLayout->setContentsMargins(0, 0, 0, 0);
-        label_5 = new QLabel(widget);
+        label_5 = new QLabel(layoutWidget);
         label_5->setObjectName(QStringLiteral("label_5"));
         label_5->setFont(font1);
 
         formLayout->setWidget(0, QFormLayout::LabelRole, label_5);
 
-        lineEdit = new QLineEdit(widget);
+        lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, lineEdit);
 
-        label_6 = new QLabel(widget);
+        label_6 = new QLabel(layoutWidget);
         label_6->setObjectName(QStringLiteral("label_6"));
         label_6->setFont(font1);
 
         formLayout->setWidget(2, QFormLayout::LabelRole, label_6);
 
-        lineEdit_2 = new QLineEdit(widget);
+        lineEdit_2 = new QLineEdit(layoutWidget);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, lineEdit_2);
 
-        widget1 = new QWidget(centralWidget);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(160, 430, 108, 81));
-        formLayout_2 = new QFormLayout(widget1);
+        layoutWidget1 = new QWidget(centralWidget);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(160, 430, 108, 81));
+        formLayout_2 = new QFormLayout(layoutWidget1);
         formLayout_2->setSpacing(6);
         formLayout_2->setContentsMargins(11, 11, 11, 11);
         formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
         formLayout_2->setContentsMargins(0, 0, 0, 0);
-        pushButton_3 = new QPushButton(widget1);
+        pushButton_3 = new QPushButton(layoutWidget1);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
 
         formLayout_2->setWidget(0, QFormLayout::SpanningRole, pushButton_3);
 
-        comboBox = new QComboBox(widget1);
+        comboBox = new QComboBox(layoutWidget1);
         comboBox->setObjectName(QStringLiteral("comboBox"));
 
         formLayout_2->setWidget(1, QFormLayout::SpanningRole, comboBox);
 
-        label_7 = new QLabel(widget1);
+        label_7 = new QLabel(layoutWidget1);
         label_7->setObjectName(QStringLiteral("label_7"));
         label_7->setFont(font);
 
         formLayout_2->setWidget(2, QFormLayout::LabelRole, label_7);
 
-        spinBox = new QSpinBox(widget1);
+        spinBox = new QSpinBox(layoutWidget1);
         spinBox->setObjectName(QStringLiteral("spinBox"));
         spinBox->setMinimum(10);
         spinBox->setMaximum(100);
@@ -160,7 +160,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 876, 21));
+        menuBar->setGeometry(QRect(0, 0, 876, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -192,12 +192,20 @@ public:
         pushButton_3->setText(QApplication::translate("MainWindow", "SendPictureAndText", 0));
         comboBox->clear();
         comboBox->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "green", 0)
-         << QApplication::translate("MainWindow", "yellow", 0)
-         << QApplication::translate("MainWindow", "white", 0)
+         << QApplication::translate("MainWindow", "color0", 0)
+         << QApplication::translate("MainWindow", "color1", 0)
          << QApplication::translate("MainWindow", "black", 0)
-         << QApplication::translate("MainWindow", "blue", 0)
+         << QApplication::translate("MainWindow", "white", 0)
+         << QApplication::translate("MainWindow", "darkGray", 0)
+         << QApplication::translate("MainWindow", "gray", 0)
+         << QApplication::translate("MainWindow", "lightGray", 0)
          << QApplication::translate("MainWindow", "red", 0)
+         << QApplication::translate("MainWindow", "green", 0)
+         << QApplication::translate("MainWindow", "blue", 0)
+         << QApplication::translate("MainWindow", "cyan", 0)
+         << QApplication::translate("MainWindow", "magenta", 0)
+         << QApplication::translate("MainWindow", "darkYellow", 0)
+         << QApplication::translate("MainWindow", "transparent", 0)
         );
         label_7->setText(QApplication::translate("MainWindow", "size", 0));
     } // retranslateUi

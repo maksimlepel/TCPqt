@@ -29,6 +29,7 @@ public:
     QWidget *centralWidget;
     QLabel *label;
     QLabel *label_2;
+    QLabel *label_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -42,14 +43,23 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(60, 10, 261, 211));
+        label->setGeometry(QRect(40, 40, 371, 231));
         label_2 = new QLabel(centralWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(120, 260, 101, 31));
+        label_2->setGeometry(QRect(10, 270, 201, 41));
+        QFont font;
+        font.setPointSize(15);
+        label_2->setFont(font);
+        label_3 = new QLabel(centralWidget);
+        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setGeometry(QRect(40, 0, 381, 31));
+        QFont font1;
+        font1.setPointSize(12);
+        label_3->setFont(font1);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 458, 21));
+        menuBar->setGeometry(QRect(0, 0, 458, 20));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -68,6 +78,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
         label->setText(QString());
         label_2->setText(QApplication::translate("MainWindow", "Received Text", 0));
+        label_3->setText(QApplication::translate("MainWindow", "Connection status:", 0));
     } // retranslateUi
 
 };

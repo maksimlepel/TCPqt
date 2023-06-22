@@ -14,9 +14,9 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    QByteArray dataFromServer;
     void setPixmap(QPixmap pm);
     void setText(QString str);
+    void setConnectionStatus(QString str);
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private slots:

@@ -133,13 +133,13 @@
      <string>Path</string>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
       <y>430</y>
       <width>141</width>
-      <height>98</height>
+      <height>102</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -183,7 +183,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -204,17 +204,12 @@
       <widget class="QComboBox" name="comboBox">
        <item>
         <property name="text">
-         <string>green</string>
+         <string>color0</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>yellow</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>white</string>
+         <string>color1</string>
         </property>
        </item>
        <item>
@@ -224,12 +219,57 @@
        </item>
        <item>
         <property name="text">
-         <string>blue</string>
+         <string>white</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>darkGray</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>gray</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>lightGray</string>
         </property>
        </item>
        <item>
         <property name="text">
          <string>red</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>green</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>blue</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>cyan</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>magenta</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>darkYellow</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>transparent</string>
         </property>
        </item>
       </widget>
@@ -271,7 +311,7 @@
      <x>0</x>
      <y>0</y>
      <width>876</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
