@@ -7,15 +7,19 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 }
-void MainWindow::setLable(QPixmap pm)
+void MainWindow::setPixmap(QPixmap pm)
 {
     ui->label->setPixmap( pm );
+}
+void MainWindow::setText(QString str)
+{
+    ui->label_2->setText(str);
 }
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
+/*
 void MainWindow::on_pushButton_clicked()
 {
     QDataStream in( dataFromServer );
@@ -31,7 +35,7 @@ void MainWindow::on_pushButton_clicked()
     painter.end();
 
 
-    ui->label->setPixmap( /*_s->myPixmap*/pm1 );
+    ui->label->setPixmap( pm1 );
 }
 void MainWindow::on_pushButton_2_clicked()
 {
@@ -39,4 +43,4 @@ void MainWindow::on_pushButton_2_clicked()
     QString str;
     in >> str;
     ui->label_2->setText(str);
-}
+}*/

@@ -19,19 +19,18 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
-
-    void on_lineEdit_returnPressed();
-
     void on_pushButton_3_clicked();
 
+    void on_lineEdit_2_editingFinished();
+
+    void on_pushButton_2_clicked();
+
 private:
-    QPixmap* myPixmap;
+    QPixmap myPixmap;
     Ui::MainWindow *ui;
     QTcpSocket* socket;
     QByteArray Data;
-    void SendString(QString str);
-    void SendImage();
+    void SendToServer();
 public slots:
     void slotReadyRead();
 };

@@ -15,12 +15,11 @@ class MainWindow : public QMainWindow
 
 public:
     QByteArray dataFromServer;
-    void setLable(QPixmap pm);
+    void setPixmap(QPixmap pm);
+    void setText(QString str);
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private slots:
-    void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
 
 private:
      Ui::MainWindow *ui;

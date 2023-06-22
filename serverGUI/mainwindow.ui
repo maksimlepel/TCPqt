@@ -27,43 +27,17 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>260</y>
-      <width>111</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>GetImage</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>260</y>
-      <width>91</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>GetText</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>270</y>
+      <x>120</x>
+      <y>260</y>
       <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Text</string>
+     <string>Received Text</string>
     </property>
    </widget>
   </widget>
