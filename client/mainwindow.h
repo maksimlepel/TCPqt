@@ -17,13 +17,14 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_save_bt_clicked();
 
-    void on_lineEdit_2_editingFinished();
+    void on_connect_bt_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_send_bt_clicked();
+
+    void on_sourcePath_le_editingFinished();
 
 private:
     QPixmap myPixmap;

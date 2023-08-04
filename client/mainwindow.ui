@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="connect_bt">
     <property name="geometry">
      <rect>
       <x>9</x>
@@ -27,7 +27,7 @@
      <string>Connect</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="inputImage_lb">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -40,7 +40,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="receivedImage_lb">
     <property name="geometry">
      <rect>
       <x>420</x>
@@ -89,7 +89,7 @@
      <string>Received image</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="save_bt">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -102,7 +102,7 @@
      <string>SAVE</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="savePath_le">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -133,75 +133,31 @@
      <string>Path</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QPushButton" name="send_bt">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>430</y>
+      <x>130</x>
+      <y>390</y>
       <width>141</width>
-      <height>102</height>
+      <height>81</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout">
-     <item row="0" column="0">
-      <widget class="QLabel" name="label_5">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Input Text</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="text">
-        <string>Default text</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_6">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Image Source</string>
-       </property>
-      </widget>
-     </item>
-     <item row="3" column="0">
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="text">
-        <string>C:\Users\NoSuchFileException\Desktop\beavers\bobr4</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string>SendPictureAndText</string>
+    </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>430</y>
-      <width>108</width>
-      <height>81</height>
+      <x>280</x>
+      <y>370</y>
+      <width>110</width>
+      <height>106</height>
      </rect>
     </property>
-    <layout class="QFormLayout" name="formLayout_2">
-     <item row="0" column="0" colspan="2">
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>SendPictureAndText</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0" colspan="2">
-      <widget class="QComboBox" name="comboBox">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="0">
+      <widget class="QComboBox" name="textColor_cb">
        <item>
         <property name="text">
          <string>color0</string>
@@ -274,20 +230,8 @@
        </item>
       </widget>
      </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_7">
-       <property name="font">
-        <font>
-         <pointsize>15</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>size</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QSpinBox" name="spinBox">
+     <item row="4" column="0">
+      <widget class="QSpinBox" name="textSize_sb">
        <property name="minimum">
         <number>10</number>
        </property>
@@ -302,8 +246,69 @@
        </property>
       </widget>
      </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Input Text</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="text_le">
+       <property name="text">
+        <string>Default text</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
+   <widget class="QLineEdit" name="sourcePath_le">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>C:\Users\NoSuchFileException\Desktop\beavers\bobr4</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>98</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Image Source</string>
+    </property>
+   </widget>
+   <zorder>connect_bt</zorder>
+   <zorder>inputImage_lb</zorder>
+   <zorder>receivedImage_lb</zorder>
+   <zorder>label_3</zorder>
+   <zorder>label_4</zorder>
+   <zorder>save_bt</zorder>
+   <zorder>savePath_le</zorder>
+   <zorder>label_8</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>send_bt</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
