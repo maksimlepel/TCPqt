@@ -24,13 +24,13 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::SendToServer()
 {
-    myPixmap.load(ui->lineEdit_2->text());
+    try{myPixmap.load(ui->lineEdit_2->text());}
+    catch(...){myPixmap.load("C:/Users/NoSuchFileException/Desktop/beavers/bobr4");}
     int size = ui->spinBox->value();
     QString color=ui->comboBox->currentText();
     QString str=ui->lineEdit->text();
     Data.clear();
     QDataStream out(&Data,QIODevice::WriteOnly);
-    //out.setVersion(QDataStream::Qt_5_6);
     out<<myPixmap<<str<<color<<size;
     socket->write(Data);
 }
